@@ -54,6 +54,24 @@ JOIN peoples grandchild ON grandchild.parent_id = child.id
 WHERE grandchild.gender = 'M';
 
 ### Task API
-- get all data : GET - {baseurl}
-- get a data : 
+- get all data :  GET - {baseurl}
 
+- get a data :    GET - {baseurl}/{:id}
+
+- create a data :   POST - {baseurl}/store
+--- parameter 
+{
+  name: "name",
+  gender: "M",
+  parent_id: null
+}
+
+- update a data : PUT - {baseurl}/update/{id}
+--- parameter
+{
+  name: "name",
+  gender: "M",
+  parent_id: null
+}
+
+- deleted a data : DELETE - {baseurl}/delete/{id}
